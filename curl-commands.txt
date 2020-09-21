@@ -1,0 +1,103 @@
+# from my personal docker Sessions
+
+  516  curl -X POST --header "Content-Type: application/json" --header "Accept: application/json" --header "Authorization: Bearer f2543c2a3fefff33a95b4d0a21d3ce"  -d "{}" "https://api.byu.edu:443/domains/servicenow/covid/v1/covid/trainingComplete"
+  517  curl -X POST --header "Content-Type: application/json" --header "Accept: application/json" --header "Authorization: Bearer 9597e844b6583432d5faa1c8ba31f2c" -d "{}" "https://api.byu.edu:443/domains/servicenow/covid/v1/covid/trainingComplete"
+  518  curl -X POST --header "Content-Type: application/json" --header "Accept: application/json" --header "Authorization: Bearer 772e62b8c2b89da87b7cf6548c8f13" -d "{}" "https://api.byu.edu:443/domains/servicenow/covid/v1/covid/trainingComplete"
+  519  curl -X POST --header "Content-Type: application/json" --header "Accept: application/json" --header "Authorization: Bearer 9597e844b6583432d5faa1c8ba31f2c" -d "{}" "https://api.byu.edu:443/domains/servicenow/covid/v1/covid/trainingComplete"
+  520  curl -vvv -X POST --header "Content-Type: application/json" --header "Accept: application/json" --header "Authorization: Bearer 9597e844b6583432d5faa1c8ba31f2c" -d "{}" "https://api.byu.edu:443/domains/servicenow/covid/v1/covid/trainingComplete"
+  521  curl -vvv -X POST --header "Content-Type: application/json" --header "Accept: application/json" --header "Authorization: Bearer cbf03cc72e72e99eacfd95e72a8d6c3" -d "{}" "https://api.byu.edu:443/domains/servicenow/covid/v1/covid/trainingComplete"
+  816  curl -i http://localhost:8001/
+  823  curl -i https://echo.tools.byu.edu/v1/asdf\ncurl (60) SSL certificate problem: certificate has expired\nMore details here: https://curl.haxx.se/docs/sslcerts.html
+  824  curl -i https://echo.tools.byu.edu/v1/asdf
+  825  curl -i https://echo.tools.byu.edu/v1/echo/asdf
+  877  curl -L http://localhost:8080//tyk-api-test/get
+  881  curl -L http://localhost:8080//tyk-api-test/get
+  895  curl -L http://localhost:8080//tyk-api-test/get
+ 1007  curl http://localhost:8080/hello -i
+ 1011  curl http://localhost:8080/hello -i
+ 1013  curl -H "x-tyk-authorization: Zls7rrBtx7hwDfk2G6rSJUskBZc31D8I" -s http://localhost:8080/tyk/reload/group | python -mjson.tool
+ 1017  curl -H "x-tyk-authorization: Zls7rrBtx7hwDfk2G6rSJUskBZc31D8I" -s http://localhost:8080/tyk/reload/group | python -mjson.tool
+ 1021  curl -H "x-tyk-authorization: Zls7rrBtx7hwDfk2G6rSJUskBZc31D8I" -s http://localhost:8080/tyk/reload/group | python -mjson.tool
+ 1022  curl -v -H "x-tyk-authorization: Zls7rrBtx7hwDfk2G6rSJUskBZc31D8I" \\n  -s \\n  -H "Content-Type: application/json" \\n  -X POST \\n  -d '{\n    "name": "Dave Test API",\n    "slug": "dave-test-api",\n    "api_id": "1",\n    "org_id": "1",\n    "auth": {\n      "auth_header_name": "Authorization"\n    },\n    "definition": {\n      "location": "header",\n      "key": "x-api-version"\n    },\n    "version_data": {\n      "not_versioned": true,\n      "versions": {\n        "Default": {\n          "name": "Default",\n          "use_extended_paths": true\n        }\n      }\n    },\n    "proxy": {\n      "listen_path": "/test-api/",\n      "target_url": "http://httpbin.org/",\n      "strip_listen_path": true\n    },\n    "active": true\n}' http://localhost:8080/tyk/apis/ | python -mjson.tool
+ 1023  curl -H "x-tyk-authorization: Zls7rrBtx7hwDfk2G6rSJUskBZc31D8I" -s http://localhost:8080/tyk/reload/group | python -mjson.tool
+ 1030  curl http://localhost:8080/hello -i
+ 1033  curl -X POST -H "x-tyk-authorization: Zls7rrBtx7hwDfk2G6rSJUskBZc31D8I" \\n  -s \\n  -H "Content-Type: application/json" \\n  -X POST \\n  -d '{\n    "allowance": 1000,\n    "rate": 1000,\n    "per": 1,\n    "expires": -1,\n    "quota_max": -1,\n    "org_id": "1",\n    "quota_renews": 1449051461,\n    "quota_remaining": -1,\n    "quota_renewal_rate": 60,\n    "access_rights": {\n      "{API-ID}": {\n        "api_id": "{API-ID}",\n        "api_name": "{API-NAME}",\n        "versions": ["Default"]\n      }\n    },\n    "meta_data": {}\n  }' http://localhost:8080/tyk/keys/create | python -mjson.tool
+ 1035  history | grep "curl"
+ 1042  curl --location --request GET 'postman-echo.com/get?name=Maria%20Roff&age=52&api_key=345678' \\n--header 'Cookie: sails.sid=s%3AIjLtITPccGdCIO5iv-1eTUN5ocj-D92n.BJsAVEAxwxsrPzbqovUZfko%2BVF6LjucYCiLnGaMue68'
+ 1043  curl --location --request GET 'postman-echo.com/get?name=John%20Doe&age=19&api_key=12345' \\n--header 'Cookie: sails.sid=s%3A0SHnpvpyVlFPVZ0B65prPtBjHVQS-95a.n0PH5z9DbNzg7fBKSpQuyYDxZzBqDrLu1Qkk3h%2BMDGE'
+ 1070  curl -H "x-tyk-authorization: Zls7rrBtx7hwDfk2G6rSJUskBZc31D8I" -s http://localhost:8080/dave-test-api | python -mjson.tool
+ 1071  curl -H "x-tyk-authorization: Zls7rrBtx7hwDfk2G6rSJUskBZc31D8I" -s http://localhost:8080/dave-test-api
+ 1072  curl -H "x-tyk-authorization: Zls7rrBtx7hwDfk2G6rSJUskBZc31D8I" -s http://localhost:8080/dave-test-api/
+ 1073  curl -H "x-tyk-authorization: Zls7rrBtx7hwDfk2G6rSJUskBZc31D8I" -s http://localhost:8080/quickstart/
+ 1074  curl] -s http://localhost:8080/quickstart/
+ 1075  curl -s http://localhost:8080/quickstart/
+ 1076  curl -s http://localhost:8080/dave-test-api
+ 1077  curl -s http://localhost:8080/dave-test-api/
+ 1078  curl -s http://httpbin/ -i
+ 1079  curl -s http://httpbin/ -v
+ 1080  curl -s http://httpbin.org/ -v
+ 1081  curl -s http://localhost:8080/tyk\=api-test/
+ 1082  curl -s http://localhost:8080/tyk-api-test/
+ 1083  curl -H "authorization: Zls7rrBtx7hwDfk2G6rSJUskBZc31D8I" -s http://localhost:8080/tyk-api-test/
+ 1084  curl -H "x-tyk-authorization: Zls7rrBtx7hwDfk2G6rSJUskBZc31D8I" -s http://localhost:8080/tyk/reload/group | python -mjson.tool\n
+ 1085  curl -H "authorization: Zls7rrBtx7hwDfk2G6rSJUskBZc31D8I" -s http://localhost:8080/tyk-api-test/
+ 1087  curl -H "x-tyk-authorization: Zls7rrBtx7hwDfk2G6rSJUskBZc31D8I" -s http://localhost:8080/tyk/reload/group | python -mjson.tool\n
+ 1103  curl -X POST -H "x-tyk-authorization: Zls7rrBtx7hwDfk2G6rSJUskBZc31D8I" \\n  -s \\n  -H "Content-Type: application/json" \\n  -X POST \\n  -d '{\n    "allowance": 1000,\n    "rate": 1000,\n    "per": 1,\n    "expires": -1,\n    "quota_max": -1,\n    "org_id": "1",\n    "quota_renews": 1449051461,\n    "quota_remaining": -1,\n    "quota_renewal_rate": 60,\n    "access_rights": {\n      "100": {\n        "api_id": "100",\n        "api_name": "Dave Test API",\n        "versions": ["Default"]\n      }\n    },\n    "meta_data": {}\n  }' http://localhost:8080/tyk/keys/create | python -mjson.tool
+ 1104  curl -H "Authorization: Zls7rrBtx7hwDfk2G6rSJUskBZc31D8I" -s http://localhost:8080/dave-test-api | python -mjson.tool
+ 1105  curl -H "Authorization: Zls7rrBtx7hwDfk2G6rSJUskBZc31D8I" -s http://localhost:8080/dave-test-api
+ 1106  curl -H "Authorization: 166671e73dc5649e29782e6e7cbb7c3e9" -s http://localhost:8080/dave-test-api 
+ 1107  curl http://localhost:8080/hello -i
+ 1108  curl -H "Authorization: 166671e73dc5649e29782e6e7cbb7c3e9" -s http://localhost:8080/dave-test-api -i
+ 1109  curl -H "x-tyk-authorization: Zls7rrBtx7hwDfk2G6rSJUskBZc31D8I" -s http://localhost:8080/tyk/reload/group | python -mjson.tool
+ 1110  curl -H "Authorization: 166671e73dc5649e29782e6e7cbb7c3e9" -s http://localhost:8080/dave-test-api -i
+ 1111  curl -H "x-tyk-authorization: Zls7rrBtx7hwDfk2G6rSJUskBZc31D8I" -s http://localhost:8080/tyk/reload/group | python -mjson.tool
+ 1112  curl -H "x-api-version: 166671e73dc5649e29782e6e7cbb7c3e9" -s http://localhost:8080/dave-test-api -i
+ 1129  curl -H "x-api-version: 166671e73dc5649e29782e6e7cbb7c3e9" -s http://localhost:8080/dave-test-api -i
+ 1143  curl http://localhost:8080/hello -i
+ 1144  curl -H "x-tyk-authorization: Zls7rrBtx7hwDfk2G6rSJUskBZc31D8I" -s http://localhost:8080/tyk/reload/group | python -mjson.tool
+ 1145  curl -H "Authorization: 166671e73dc5649e29782e6e7cbb7c3e9" -s http://localhost:8080/dave-test-api/ -i
+ 1147  curl -X GET --header "Accept: application/json" --header "Authorization: Bearer e43220ae7d324252c1716a83c4b9694" "https://api.byu.edu:443/echo/v2/echo"
+ 1151  curl -v -H "x-tyk-authorization: Zls7rrBtx7hwDfk2G6rSJUskBZc31D8I" \\n  -s \\n  -H "Content-Type: application/json" \\n  -X POST \\n  -d '{\n    "name": "Echo West",\n    "slug": "echo-west",\n    "api_id": "0E61DF2C-44DC-4BA7-9CA5-31D897AA4C1D",\n    "org_id": "default",\n    "auth": {\n      "auth_header_name": "Authorization"\n    },\n    "definition": {\n      "location": "header",\n      "key": "x-api-version"\n    },\n    "version_data": {\n      "not_versioned": true,\n      "versions": {\n        "Default": {\n          "name": "Default",\n          "use_extended_paths": true\n        }\n      }\n    },\n    "proxy": {\n      "listen_path": "/dave-test-api/",\n      "target_url": "http://httpbin.org/",\n      "strip_listen_path": true\n    },\n    "active": true\n}' http://localhost:8080/tyk/apis/ | python -mjson.tool
+ 1152  curl -H "x-tyk-authorization: Zls7rrBtx7hwDfk2G6rSJUskBZc31D8I" -s http://localhost:8080/tyk/reload/group | python -mjson.tool
+ 1153  curl -X POST -H "x-tyk-authorization: Zls7rrBtx7hwDfk2G6rSJUskBZc31D8I" \\n  -s \\n  -H "Content-Type: application/json" \\n  -X POST \\n  -d '{\n    "allowance": 1000,\n    "rate": 1000,\n    "per": 1,\n    "expires": -1,\n    "quota_max": -1,\n    "org_id": "1",\n    "quota_renews": 1449051461,\n    "quota_remaining": -1,\n    "quota_renewal_rate": 60,\n    "access_rights": {\n      "0E61DF2C-44DC-4BA7-9CA5-31D897AA4C1D": {\n        "api_id": "0E61DF2C-44DC-4BA7-9CA5-31D897AA4C1D",\n        "api_name": "Echo West",\n        "versions": ["Default"]\n      }\n    },\n    "meta_data": {}\n  }' http://localhost:8080/tyk/keys/create | python -mjson.tool
+ 1154  curl -H "x-tyk-authorization: Zls7rrBtx7hwDfk2G6rSJUskBZc31D8I" -s http://localhost:8080/tyk/reload/group | python -mjson.tool
+ 1160  curl -v -H "x-tyk-authorization: Zls7rrBtx7hwDfk2G6rSJUskBZc31D8I" \\n  -s \\n  -H "Content-Type: application/json" \\n  -X POST \\n  -d '{\n    "name": "Echo East",\n    "slug": "echo-east",\n    "api_id": "5BE3ADFD-3E4D-4592-B8BC-527F3A338EB7",\n    "org_id": "default",\n    "auth": {\n      "auth_header_name": "Authorization"\n    },\n    "definition": {\n      "location": "header",\n      "key": "x-api-version"\n    },\n    "version_data": {\n      "not_versioned": true,\n      "versions": {\n        "Default": {\n          "name": "Default",\n          "use_extended_paths": true\n        }\n      }\n    },\n    "proxy": {\n      "listen_path": "/echo-east/",\n      "target_url": "https://echo-east.byu-oit-apimanager-dev.amazon.byu.edu/v1/echo/asdf",\n      "strip_listen_path": true\n    },\n    "active": true\n}' http://localhost:8080/tyk/apis/ | python -mjson.tool
+ 1161  curl -X POST -H "x-tyk-authorization: Zls7rrBtx7hwDfk2G6rSJUskBZc31D8I" \\n  -s \\n  -H "Content-Type: application/json" \\n  -X POST \\n  -d '{\n    "allowance": 1000,\n    "rate": 1000,\n    "per": 1,\n    "expires": -1,\n    "quota_max": -1,\n    "org_id": "1",\n    "quota_renews": 1449051461,\n    "quota_remaining": -1,\n    "quota_renewal_rate": 60,\n    "access_rights": {\n      "5BE3ADFD-3E4D-4592-B8BC-527F3A338EB7": {\n        "api_id": "5BE3ADFD-3E4D-4592-B8BC-527F3A338EB7",\n        "api_name": "Echo West",\n        "versions": ["Default"]\n      }\n    },\n    "meta_data": {}\n  }' http://localhost:8080/tyk/keys/create | python -mjson.tool
+ 1162  curl -H "x-tyk-authorization: Zls7rrBtx7hwDfk2G6rSJUskBZc31D8I" -s http://localhost:8080/tyk/reload/group | python -mjson.tool
+ 1164  curl -v -H "x-tyk-authorization: Zls7rrBtx7hwDfk2G6rSJUskBZc31D8I" \\n  -s \\n  -H "Content-Type: application/json" \\n  -X POST \\n  -d '{\n    "name": "Echo Josh",\n    "slug": "echo-josh",\n    "api_id": "2710CFB6-40AA-4E3A-AE11-9456BF3E0E1F",\n    "org_id": "default",\n    "auth": {\n      "auth_header_name": "Authorization"\n    },\n    "definition": {\n      "location": "header",\n      "key": "x-api-version"\n    },\n    "version_data": {\n      "not_versioned": true,\n      "versions": {\n        "Default": {\n          "name": "Default",\n          "use_extended_paths": true\n        }\n      }\n    },\n    "proxy": {\n      "listen_path": "/echo-josh/",\n      "target_url": "http://home.joshgubler.com/v1/echo/asdf",\n      "strip_listen_path": true\n    },\n    "active": true\n}' http://localhost:8080/tyk/apis/ | python -mjson.tool
+ 1165  curl -X POST -H "x-tyk-authorization: Zls7rrBtx7hwDfk2G6rSJUskBZc31D8I" \\n  -s \\n  -H "Content-Type: application/json" \\n  -X POST \\n  -d '{\n    "allowance": 1000,\n    "rate": 1000,\n    "per": 1,\n    "expires": -1,\n    "quota_max": -1,\n    "org_id": "1",\n    "quota_renews": 1449051461,\n    "quota_remaining": -1,\n    "quota_renewal_rate": 60,\n    "access_rights": {\n      "2710CFB6-40AA-4E3A-AE11-9456BF3E0E1F": {\n        "api_id": "2710CFB6-40AA-4E3A-AE11-9456BF3E0E1F",\n        "api_name": "Echo Josh",\n        "versions": ["Default"]\n      }\n    },\n    "meta_data": {}\n  }' http://localhost:8080/tyk/keys/create | python -mjson.tool
+ 1166  curl -H "x-tyk-authorization: Zls7rrBtx7hwDfk2G6rSJUskBZc31D8I" -s http://localhost:8080/tyk/reload/group | python -mjson.tool
+ 1171  curl -i http://localhost:8001/
+ 1172  curl -i http://localhost:8001/ | python -mjson.tool
+ 1173  curl http://localhost:8001/ | python -mjson.tool
+ 1186  curl -i -X POST \\n  --url http://localhost:8001/services/ \\n  --data 'name=example-service' \\n  --data 'url=http://mockbin.org'
+ 1187  curl -i -X POST \\n  --url http://localhost:8001/services/example-service/routes \\n  --data 'hosts[]=example.com'\n
+ 1188  curl -i -X GET \\n  --url http://localhost:8000/ \\n  --header 'Host: example.com'
+ 1189  curl -i -X POST \\n  --url http://localhost:8001/consumers/ \\n  --data "username=David-Caldwell"
+ 1191  curl -k -d "grant_type=client_credentials" -H "Authorization: Basic NnBtbnRuOTFIc19JVlRMdkg3Zkg1UjA3dFNvYTpKUWZka2dTNl80UHFBaE1UeUxTejRZOHZNTGth, Content-Type: application/x-www-form-urlencoded" https://api.byu.edu:443/token
+ 1192  curl -i -X POST \\n  --url http://localhost:8001/consumers/David-Caldwell/key-auth/ \\n  --data 'key=06104FC3-0A62-4759-8606-8F3011441022'
+ 1193  curl -i -X GET \\n  --url http://localhost:8000 \\n  --header "Host: example.com" \\n  --header "apikey: 06104FC3-0A62-4759-8606-8F3011441022"
+ 1214  bb curl-commands.sh
+ 1215  curl -i -X POST \\n  --url http://localhost:8001/
+ 1216  curl -i -X POST \\n  --url http://localhost:8001/methods/
+ 1217  curl -i -X POST \\n  --url http://localhost:8001
+ 1218  curl -X POST http://localhost:8001/services \\n  --data name=admin-api \\n  --data url=http://localhost:8001/
+ 1219  curl -i -X GET \\n  --url http://localhost:8000/
+ 1220  curl -i -X POST \\n  --url http://localhost:8001/services/admin-api/routes \\n  --data 'paths[]=/'
+ 1221  curl -i -X POST \\n  --url http://localhost:8001/endpoints
+ 1240  curl -i -X GET http://localhost:8001\\n
+ 1241  curl -i -X GET http://localhost:8001 | python -mjson.tool
+ 1242  curl -X GET http://localhost:8001 | python -mjson.tool
+ 1243  curl -X GET http://localhost:8001/ | python -mjson.tool
+ 1244  curl -i -X POST http://localhost:8001/services/admin-api/routes \\n     -H "Content-Type: application/json" \\n     -d '{"name": "admin-route", "paths": [ "/admin-api" ]}'
+ 1245  curl -i -X POST \\n  --url http://localhost:8001/services/admin-api/routes \\n  --data 'paths[]=/admin-api/' 
+ 1246  curl -i -X POST \\n  --url http://localhost:8001/services/ \\n  --data 'name=api-manager-service' \\n  --data 'url=http://localhost:8001/'
+ 1247  curl -i -X POST \\n  --url http://localhost:8001/services/api-manager-service/routes \\n  --data 'hosts[]=api-manager.org'
+ 1248  curl -i -X POST \\n  --url http://localhost:8000/services/ \\n  --header "Host: api-manager.org" \\n  --data 'name=dave-test-api' \\n  --data 'url=http://httpbin.org/'
+ 1249  curl -i -X POST \\n  --url http://localhost:8000/services/date-test-api/routes \\n  --header "Host: api-manager.org" \\n  -d "name=date-test-route" \\n  -d "paths[]=/davetestapi"
+ 1250  curl -i -X POST \\n  --url http://localhost:8000/services/dave-test-api/routes \\n  --header "Host: api-manager.org" \\n  -d "name=dave-test-route" \\n  -d "paths[]=/davetestapi"
+ 1251  curl -i -X POST \\n  --url http://localhost:8001/services/admin-api/plugins/ \\n  --data 'name=key-auth'
+ 1364  curl -i http://kong.byu-oit-toolsteam-dev.amazon.byu.edu
+ 1365  curl -i https://kong.byu-oit-toolsteam-dev.amazon.byu.edu
+ 1367  curl -i -X POST   --url https://localhost:8001/services/
+ 1375  history | grep curl
